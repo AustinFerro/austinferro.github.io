@@ -48,9 +48,9 @@ Ferro A, Vita DJ, Fallon T, Arshad A, Boyd L, Stanley T, Lin Q, Berisha A, Vrudh
 
 | Domain | Techniques |
 |---|---|
-| Glial–synapse interactions | Two-photon live imaging |
-| OPC phagocytosis | Multiphoton microscopy |
-| Microglia & neural activity | Electron microscopy |
+| Glial–synapse interactions | Multiphoton live imaging |
+| OPC phagocytosis | Super resolution microscopy |
+| Glial modulation of neural activity | Electron microscopy |
 | Neuro-immune signaling | scRNA-seq & transcriptomics |
 | Neurodevelopment & neurodegeneration | Custom image analysis pipelines |
 
