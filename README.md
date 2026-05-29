@@ -66,6 +66,6 @@ J. A. Kahng, A. M. Xavier, **A. Ferro**, S. X. Tang, Y. S. S. Auguste, L. Cheadl
 
 <div align="center">
 
-*Cold Spring Harbor, NY · [aferro@cshl.edu](mailto:ferro@cshl.edu)*
+*Cold Spring Harbor, NY · [ferro@cshl.edu](mailto:ferro@cshl.edu)*
 
 </div>
