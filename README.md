@@ -35,12 +35,11 @@ I am particularly interested in how glia engage, both directly and indirectly, a
 ---
 
 ## Selected Publications
+**A. Ferro***, Y. S. S. Auguste*, J. A. Kahng, A. M. Xavier, J. R. Dixon, U. Vrudhula, A. S. Nichitiu, D. Rosado, T. L. Wee, U. V. Pedmale, L. Cheadle, Oligodendrocyte precursor cells engulf synapses during circuit remodeling in mice. Nature Neuroscience 25 (2022). https://doi.org/10.1038/s41593-022-01170-x   *Equal contributions
 
-**A. Ferro***, Y. S. S. Auguste*, J. A. Kahng, A. M. Xavier, J. R. Dixon, U. Vrudhula, A. S. Nichitiu, D. Rosado, T. L. Wee, U. V. Pedmale, L. Cheadle, Oligodendrocyte precursor cells engulf synapses during circuit remodeling in mice. Nature Neuroscience 25 (2022).
+**Ferro A**, Vita DJ, Fallon T, Arshad A, Boyd L, Stanley T, Lin Q, Berisha A, Vrudhula U, Gomez AM, Sanchez-Martin I, Borniger JC, Cheadle L. Fn14 is an activity-dependent, Bmal1-regulated cytokine receptor that induces rod-like microglia and restricts neuronal activity in vivo. Cell Reports, 45(2):116926. (2026) https://doi.org/10.1016/j.celrep.2026.116926
 
-**Ferro A**, Vita DJ, Fallon T, Arshad A, Boyd L, Stanley T, Lin Q, Berisha A, Vrudhula U, Gomez AM, Sanchez-Martin I, Borniger JC, Cheadle L. Fn14 is an activity-dependent, Bmal1-regulated cytokine receptor that induces rod-like microglia and restricts neuronal activity in vivo. Cell Reports, 45(2):116926. (2026)
-
-J. A. Kahng, A. M. Xavier, **A. Ferro**, S. X. Tang, Y. S. S. Auguste, L. Cheadle, High-confidence and high-throughput quantification of synapse engulfment by oligodendrocyte precursor cells. Nature Protocols, 1–33 (2024).
+J. A. Kahng, A. M. Xavier, **A. Ferro**, S. X. Tang, Y. S. S. Auguste, L. Cheadle, High-confidence and high-throughput quantification of synapse engulfment by oligodendrocyte precursor cells. Nature Protocols, 1–33 (2024). https://doi.org/10.1038/s41596-024-01048-1
 
 📚 [Full publication list on Google Scholar](https://scholar.google.com/citations?user=997G3cYAAAAJ&hl=en)
 
