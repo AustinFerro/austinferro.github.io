@@ -64,6 +64,6 @@ Ferro A, Vita DJ, Fallon T, Arshad A, Boyd L, Stanley T, Lin Q, Berisha A, Vrudh
 
 <div align="center">
 
-*Cold Spring Harbor, NY · [aferro@cshl.edu](mailto:aferro@cshl.edu)*
+*Cold Spring Harbor, NY · [aferro@cshl.edu](mailto:ferro@cshl.edu)*
 
 </div>
