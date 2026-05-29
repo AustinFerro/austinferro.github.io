@@ -8,7 +8,7 @@
 
 [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=997G3cYAAAAJ&hl=en)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/austin-ferro-phd-b4638987/)
-[![CSHL](https://img.shields.io/badge/CSHL%20Profile-8B1A1A?style=for-the-badge&logoColor=white)](https://www.cshl.edu/research/postdoctoral-research/postdocs/austin-ferro/)
+
 
 </div>
 
@@ -16,7 +16,7 @@
 
 ## About Me
 
-I am a senior postdoctoral fellow in [Dr. Lucas Cheadle's lab](https://www.cshl.edu/research/faculty-staff/lucas-cheadle/) with joint appointments at Cold Spring Harbor Laboratory (CSHL) and HHMI. My research focuses on how non-neuronal cells — astrocytes, microglia, and oligodendrocyte precursor cells (OPCs) — interact with neurons and with each other to form functional neural circuits.
+I am a senior postdoctoral fellow in [Dr. Lucas Cheadle's lab]([https://www.cshl.edu/research/faculty-staff/lucas-cheadle/](https://www.cheadlelab.com/)) with joint appointments at Cold Spring Harbor Laboratory (CSHL) and HHMI. My research focuses on how non-neuronal cells — astrocytes, microglia, and oligodendrocyte precursor cells (OPCs) — interact with neurons and with each other to form functional neural circuits.
 
 I am particularly interested in how glia engage, both directly and indirectly, at the synapse to shape brain development and contribute to neurodegenerative disease. To answer these questions, I employ a range of cutting-edge imaging modalities including **single-photon** and **multiphoton microscopy**, **electron microscopy**, and custom image analysis pipelines.
 
@@ -24,7 +24,7 @@ I am particularly interested in how glia engage, both directly and indirectly, a
 
 ## Featured Imaging
 
-> *Two-photon live imaging of OPC–microglia contacts at synapses in the developing mouse visual cortex.*
+> *OPC–microglia contacts at synapses in the developing mouse visual cortex.*
 
 <div align="center">
 
@@ -36,19 +36,9 @@ I am particularly interested in how glia engage, both directly and indirectly, a
 
 ## Selected Publications
 
-### 2025
-- **Vita D, Ferro A, Cheadle L.** (2025) *[Title TBD — glial biology].* *Current Opinion in Neurobiology*, 93:103059.
+A. Ferro*, Y. S. S. Auguste*, J. A. Kahng, A. M. Xavier, J. R. Dixon, U. Vrudhula, A. S. Nichitiu, D. Rosado, T. L. Wee, U. V. Pedmale, L. Cheadle, Oligodendrocyte precursor cells engulf synapses during circuit remodeling in mice. Nature Neuroscience 25 (2022).
 
-### 2024
-- **Kahng JA, Xavier AM, Ferro A, Tang S, Auguste YS, Cheadle L.** (2024) High-confidence and high-throughput quantification of synapse engulfment by oligodendrocyte precursor cells. *Nature Protocols.* [doi link](https://doi.org/10.1038/s41596-024-01053-0)
-
-### 2022
-- **Auguste YS, Ferro A, Kahng JA, Xavier AM, Dixon JR, Vrudhula U, Nichitiu A-S, Rosado D, Wee T-L, Pedmale UV, Cheadle L.** (2022) Oligodendrocyte precursor cells engulf synapses during circuit remodeling in mice. *Nature Neuroscience.* ISSN 1097-6256.
-
-- **Ferro A, Cheadle L.** (2022) When the levee of sympathetic outflow breaks. *Immunity*, 55(8):1334–1336.
-
-### 2021
-- **Ferro A, Auguste YS, Cheadle L.** (2021) Microglia, Cytokines, and Neural Activity: Unexpected Interactions in Brain Development and Function. *Frontiers in Immunology*, 12:703527.
+Ferro A, Vita DJ, Fallon T, Arshad A, Boyd L, Stanley T, Lin Q, Berisha A, Vrudhula U, Gomez AM, Sanchez-Martin I, Borniger JC, Cheadle L. Fn14 is an activity-dependent, Bmal1-regulated cytokine receptor that induces rod-like microglia and restricts neuronal activity in vivo. Cell Reports, 45(2):116926. (2026)
 
 📚 [Full publication list on Google Scholar](https://scholar.google.com/citations?user=997G3cYAAAAJ&hl=en)
 
