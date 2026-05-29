@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Austin Ferro, PhD | Glial Neuroscience | CSHL</title>
+<meta name="description" content="Austin Ferro, PhD – Senior Postdoctoral Fellow at Cold Spring Harbor Laboratory and HHMI. Research in glial biology, synaptic plasticity, and advanced imaging.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f9f7f4;
+    --surface: #ffffff;
+    --ink: #1a1a1a;
+    --ink-mid: #4a4a4a;
+    --ink-light: #7a7a7a;
+    --rule: #e2dfd8;
+    --accent: #2c5f8a;
+    --accent-light: #e8f0f7;
+    --accent-hover: #1e4568;
+    --teal: #1d7a6e;
+    --teal-light: #e3f4f2;
+    --serif: 'Crimson Pro', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+    --max: 860px;
+    --nav-h: 60px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--nav-h);
+    background: rgba(249,247,244,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--rule);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 clamp(1.5rem, 5vw, 4rem);
+  }
+  .nav-name {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-mid);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .hamburger { display: none; background: none; border: none; cursor: pointer; }
+
+  /* ── LAYOUT ── */
+  main { padding-top: var(--nav-h); }
+  section {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 5rem clamp(1.5rem, 5vw, 2rem);
+  }
+  section + section { border-top: 1px solid var(--rule); }
+
+  /* ── HERO ── */
+  #hero {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: start;
+  }
+  .hero-eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+    color: var(--ink);
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--ink-mid);
+    font-weight: 300;
+  }
+  .hero-bio {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--ink-mid);
+    max-width: 540px;
+    margin-bottom: 2rem;
+  }
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .tag {
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    background: var(--accent-light);
+  }
+  .tag.teal {
+    border-color: var(--teal);
+    color: var(--teal);
+    background: var(--teal-light);
+  }
+  .hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 1.2rem;
+    font-size: 0.83rem;
+    font-family: var(--sans);
+    letter-spacing: 0.04em;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    border: 1px solid var(--accent);
+  }
+  .btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+  .btn-outline {
+    background: transparent;
+    color: var(--ink-mid);
+    border: 1px solid var(--rule);
+  }
+  .btn-outline:hover { border-color: var(--ink-mid); color: var(--ink); background: var(--surface); }
+
+  .gif-frame {
+    flex-shrink: 0;
+    width: 200px;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+  }
+  .gif-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .gif-caption {
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-light);
+    text-align: center;
+    padding: 0.4rem 0.5rem;
+    background: var(--surface);
+    border-top: 1px solid var(--rule);
+    line-height: 1.4;
+  }
+
+  /* ── SECTION HEADINGS ── */
+  h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.5rem, 3vw, 1.9rem);
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+    color: var(--ink);
+  }
+  .section-sub {
+    font-size: 0.85rem;
+    color: var(--ink-light);
+    letter-spacing: 0.04em;
+    margin-bottom: 2.5rem;
+  }
+
+  /* ── RESEARCH ── */
+  .research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1rem;
+  }
+  .research-card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 1.4rem 1.4rem 1.2rem;
+  }
+  .research-card-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    margin-bottom: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+  .ic-blue { background: var(--accent-light); color: var(--accent); }
+  .ic-teal { background: var(--teal-light); color: var(--teal); }
+  .ic-warm { background: #fef3ea; color: #a0520a; }
+  .research-card h3 {
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--ink);
+  }
+  .research-card p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--ink-mid);
+  }
+
+  /* ── PUBLICATIONS ── */
+  .pub-list { list-style: none; }
+  .pub-item {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+  .pub-item:first-child { border-top: 1px solid var(--rule); }
+  .pub-year {
+    font-size: 0.78rem;
+    color: var(--ink-light);
+    letter-spacing: 0.05em;
+    padding-top: 0.2rem;
+    width: 42px;
+    flex-shrink: 0;
+  }
+  .pub-title {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+    line-height: 1.4;
+  }
+  .pub-journal {
+    font-size: 0.8rem;
+    color: var(--ink-light);
+    font-style: italic;
+  }
+  .pub-badge {
+    display: inline-block;
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+    margin-left: 0.5rem;
+    font-style: normal;
+    vertical-align: middle;
+    font-family: var(--sans);
+  }
+  .badge-teal { background: var(--teal-light); color: var(--teal); }
+  .badge-blue { background: var(--accent-light); color: var(--accent); }
+  .pub-link {
+    font-size: 0.78rem;
+    color: var(--accent);
+    text-decoration: none;
+    margin-top: 0.25rem;
+    display: inline-block;
+  }
+  .pub-link:hover { text-decoration: underline; }
+  .pub-more {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--ink-mid);
+  }
+  .pub-more a { color: var(--accent); text-decoration: none; }
+  .pub-more a:hover { text-decoration: underline; }
+
+  /* ── SKILLS ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem 2rem;
+    margin-top: 0.5rem;
+  }
+  .skill-group h4 {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+  }
+  .skill-group ul {
+    list-style: none;
+  }
+  .skill-group li {
+    font-size: 0.88rem;
+    color: var(--ink-mid);
+    padding: 0.2rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* ── CV TIMELINE ── */
+  .timeline { list-style: none; }
+  .tl-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1rem;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .tl-item:first-child { border-top: 1px solid var(--rule); }
+  .tl-dates {
+    font-size: 0.78rem;
+    color: var(--ink-light);
+    letter-spacing: 0.03em;
+    padding-top: 0.15rem;
+  }
+  .tl-role {
+    font-weight: 500;
+    font-size: 0.93rem;
+    color: var(--ink);
+    margin-bottom: 0.15rem;
+  }
+  .tl-place {
+    font-size: 0.83rem;
+    color: var(--ink-mid);
+  }
+  .tl-detail {
+    font-size: 0.8rem;
+    color: var(--ink-light);
+    margin-top: 0.2rem;
+    line-height: 1.5;
+  }
+
+  /* ── AWARDS ── */
+  .awards-list { list-style: none; }
+  .award-item {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+  }
+  .award-year {
+    font-size: 0.75rem;
+    color: var(--ink-light);
+    padding-top: 0.15rem;
+  }
+  .award-name {
+    font-size: 0.9rem;
+    color: var(--ink);
+    font-weight: 400;
+  }
+  .award-org {
+    font-size: 0.8rem;
+    color: var(--ink-light);
+  }
+
+  /* ── CONTACT ── */
+  #contact {
+    background: var(--surface);
+    max-width: 100%;
+    padding: 4rem clamp(1.5rem, 5vw, 2rem);
+  }
+  .contact-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .contact-text h2 { margin-bottom: 0.75rem; }
+  .contact-text p { font-size: 0.93rem; color: var(--ink-mid); line-height: 1.7; }
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.88rem;
+    color: var(--ink-mid);
+    text-decoration: none;
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    background: var(--bg);
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .contact-link:hover { border-color: var(--accent); color: var(--accent); }
+  .contact-link svg { width: 18px; height: 18px; flex-shrink: 0; opacity: 0.7; }
+  .contact-link:hover svg { opacity: 1; }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 1.5rem 2rem;
+    font-size: 0.75rem;
+    color: var(--ink-light);
+    border-top: 1px solid var(--rule);
+    letter-spacing: 0.03em;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 660px) {
+    #hero {
+      grid-template-columns: 1fr;
+      padding-top: 4rem;
+    }
+    .gif-frame {
+      width: 120px;
+      position: absolute;
+      top: 4.5rem;
+      right: 1.5rem;
+    }
+    .nav-links { display: none; }
+    .nav-links.open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--rule);
+      padding: 1rem 1.5rem;
+      gap: 1rem;
+    }
+    .hamburger { display: block; }
+    .contact-inner { grid-template-columns: 1fr; }
+    .tl-item { grid-template-columns: 80px 1fr; }
+    #hero { position: relative; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#hero" class="nav-name">Austin Ferro, PhD</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#research">Research</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#cv">CV</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" onclick="document.getElementById('nav-links').classList.toggle('open')">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <line x1="2" y1="6" x2="20" y2="6"/>
+      <line x1="2" y1="11" x2="20" y2="11"/>
+      <line x1="2" y1="16" x2="20" y2="16"/>
+    </svg>
+  </button>
+</nav>
+
+<main>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div>
+    <p class="hero-eyebrow">Cold Spring Harbor Laboratory &amp; HHMI</p>
+    <h1>Austin Ferro<br><em>PhD</em></h1>
+    <p class="hero-bio">
+      I am a senior postdoctoral fellow in the Cheadle Lab studying how glial cells sculpt and maintain neural circuits. My work spans glial biology, neuro-immune interactions, and synaptic plasticity — using advanced imaging approaches to watch cells interact in the living brain.
+    </p>
+    <div class="hero-tags">
+      <span class="tag">Glial Biology</span>
+      <span class="tag">Synaptic Plasticity</span>
+      <span class="tag">Neuro-Immune Interactions</span>
+      <span class="tag teal">Two-Photon Imaging</span>
+      <span class="tag teal">Electron Microscopy</span>
+      <span class="tag teal">OPCs &amp; Microglia</span>
+    </div>
+    <div class="hero-links">
+      <a class="btn btn-primary" href="AUSTIN FERRO_CV2026.docx" download>
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v8M5 7l3 3 3-3"/><rect x="2" y="11" width="12" height="2" rx="1"/></svg>
+        Download CV
+      </a>
+      <a class="btn btn-outline" href="https://scholar.google.com/citations?user=997G3cYAAAAJ&hl=en" target="_blank" rel="noopener">
+        Google Scholar
+      </a>
+      <a class="btn btn-outline" href="https://www.linkedin.com/in/austin-ferro-phd-b4638987/" target="_blank" rel="noopener">
+        LinkedIn
+      </a>
+    </div>
+  </div>
+  <div class="gif-frame">
+    <img
+      src="scene4_opc_microglia_contacts_synapses.gif"
+      alt="Live two-photon microscopy: OPC–microglia contacts and synapses"
+    />
+    <p class="gif-caption">OPC–microglia contacts &amp; synapses · serial TEM reconstruction</p>
+  </div>
+</section>
+
+<!-- ── RESEARCH ── -->
+<section id="research">
+  <h2>Research</h2>
+  <p class="section-sub">Understanding how glial cells build, maintain, and remodel the brain's wiring</p>
+  <div class="research-grid">
+    <div class="research-card">
+      <div class="research-card-icon ic-teal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M3 12h3M18 12h3M12 3v3M12 18v3"/><path d="M6.34 6.34l2.12 2.12M15.54 15.54l2.12 2.12M15.54 8.46l2.12-2.12M6.34 17.66l2.12-2.12"/></svg>
+      </div>
+      <h3>OPC–Synapse Interactions</h3>
+      <p>Oligodendrocyte precursor cells engage in activity-dependent phagocytic engulfment of synapses during development and experience-dependent plasticity. I develop high-precision imaging and quantification tools to measure this process with single-synapse resolution.</p>
+    </div>
+    <div class="research-card">
+      <div class="research-card-icon ic-blue">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/></svg>
+      </div>
+      <h3>Microglia &amp; Neural Circuit Maturation</h3>
+      <p>Microglia are dynamic sentinels of neural circuits. Using live two-photon imaging in awake mice, I observe how microglial surveillance and synaptic interactions are regulated by sensory experience in the developing visual cortex.</p>
+    </div>
+    <div class="research-card">
+      <div class="research-card-icon ic-warm">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <h3>Glia in Neurodegeneration</h3>
+      <p>My PhD work (Cvetanovic Lab, U Minnesota) established that Bergmann glia undergo biphasic gene expression changes in spinocerebellar ataxia type 1, shifting from neuroprotective to pathological states. These findings revealed glial-specific therapeutic targets in cerebellar ataxia.</p>
+    </div>
+  </div>
+
+  <div style="margin-top:2.5rem; padding: 1.4rem 1.6rem; background: var(--surface); border: 1px solid var(--rule); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0;">
+    <p style="font-size:0.88rem; color:var(--ink-mid); line-height:1.75;">
+      <strong style="color:var(--ink); font-weight:500;">Techniques:</strong>
+      Single &amp; multi-photon in vivo imaging &nbsp;·&nbsp; Electron microscopy &nbsp;·&nbsp; Expansion microscopy &nbsp;·&nbsp; Single-cell RNA-seq &nbsp;·&nbsp; Viral circuit tracing &nbsp;·&nbsp; Mouse behavioral paradigms &nbsp;·&nbsp; Quantitative image analysis (FIJI/Python)
+    </p>
+  </div>
+</section>
+
+<!-- ── PUBLICATIONS ── -->
+<section id="publications">
+  <h2>Selected Publications</h2>
+  <p class="section-sub"><a href="https://scholar.google.com/citations?user=997G3cYAAAAJ&hl=en" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">Full publication list on Google Scholar</a></p>
+
+  <ul class="pub-list">
+
+    <li class="pub-item">
+      <span class="pub-year">2026</span>
+      <div>
+        <p class="pub-title">Fn14 is an activity-dependent, Bmal1-regulated cytokine receptor that induces rod-like microglia and restricts neuronal activity in vivo</p>
+        <p class="pub-journal">Cell Reports<span class="pub-badge badge-blue">45(2):116926</span></p>
+        <p style="font-size:0.8rem;color:var(--ink-light);margin-top:0.25rem;line-height:1.5;"><strong>Ferro A</strong>, Vita DJ, Fallon T, Arshad A, Boyd L, Stanley T, Lin Q, Berisha A, Vrudhula U, Gomez AM, Sanchez-Martin I, Borniger JC, Cheadle L</p>
+        <a class="pub-link" href="https://doi.org/10.1016/j.celrep.2026.116926" target="_blank" rel="noopener">doi:10.1016/j.celrep.2026.116926 ↗</a>
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <span class="pub-year">2024</span>
+      <div>
+        <p class="pub-title">High-confidence and high-throughput quantification of synapse engulfment by oligodendrocyte precursor cells</p>
+        <p class="pub-journal">Nature Protocols<span class="pub-badge badge-teal">Methods</span></p>
+        <p style="font-size:0.8rem;color:var(--ink-light);margin-top:0.25rem;line-height:1.5;">Kahng JA, Xavier AM, <strong>Ferro A</strong>, Tang SX, Auguste YSS, Cheadle L</p>
+        <a class="pub-link" href="https://doi.org/10.1038/s41596-024-01048-1" target="_blank" rel="noopener">doi:10.1038/s41596-024-01048-1 ↗</a>
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <span class="pub-year">2022</span>
+      <div>
+        <p class="pub-title">Oligodendrocyte precursor cells engulf synapses during circuit remodeling in mice</p>
+        <p class="pub-journal">Nature Neuroscience<span class="pub-badge badge-teal">★ Equal contributions</span></p>
+        <p style="font-size:0.8rem;color:var(--ink-light);margin-top:0.25rem;line-height:1.5;"><strong>Ferro A</strong>*, Auguste YSS*, Kahng JA, Xavier AM, Dixon JR, Vrudhula U, Nichitiu AS, Rosado D, Wee TL, Pedmale UV, Cheadle L &nbsp;<em>(* equal contributions)</em></p>
+        <a class="pub-link" href="https://doi.org/10.1038/s41593-022-01170-x" target="_blank" rel="noopener">doi:10.1038/s41593-022-01170-x ↗</a>
+      </div>
+    </li>
+
+  </ul>
+
+  <p class="pub-more">
+    <a href="https://scholar.google.com/citations?user=997G3cYAAAAJ&hl=en" target="_blank" rel="noopener">📚 Full publication list on Google Scholar</a>
+  </p>
+</section>
+
+<!-- ── CV ── -->
+<section id="cv">
+  <h2>CV Highlights</h2>
+  <p class="section-sub">Full CV available for download above</p>
+
+  <h3 style="font-family:var(--sans);font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin:2rem 0 0.5rem;font-weight:500;">Positions</h3>
+  <ul class="timeline">
+    <li class="tl-item">
+      <span class="tl-dates">2021–Present</span>
+      <div>
+        <p class="tl-role">Senior Postdoctoral Fellow</p>
+        <p class="tl-place">Cheadle Lab · Cold Spring Harbor Laboratory &amp; HHMI</p>
+        <p class="tl-detail">Glial control of synaptic plasticity; OPC–synapse engulfment; live two-photon imaging in awake mice</p>
+      </div>
+    </li>
+    <li class="tl-item">
+      <span class="tl-dates">2015–2020</span>
+      <div>
+        <p class="tl-role">PhD, Neuroscience</p>
+        <p class="tl-place">Cvetanovic Lab · University of Minnesota</p>
+        <p class="tl-detail">Thesis: Role of microglia and astrocytes in spinocerebellar ataxia type 1. F31 NIH Fellow.</p>
+      </div>
+    </li>
+    <li class="tl-item">
+      <span class="tl-dates">2011–2015</span>
+      <div>
+        <p class="tl-role">B.A., Neuroscience</p>
+        <p class="tl-place">Skidmore College</p>
+      </div>
+    </li>
+  </ul>
+
+  <h3 style="font-family:var(--sans);font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin:2rem 0 0.5rem;font-weight:500;">Awards &amp; Funding</h3>
+  <ul class="awards-list">
+    <li class="award-item" style="border-top:1px solid var(--rule);">
+      <span class="award-year">2018</span>
+      <div>
+        <p class="award-name">F31 NS103392-01A1 — Ruth L. Kirschstein NRSA</p>
+        <p class="award-org">National Institutes of Health</p>
+      </div>
+    </li>
+    <li class="award-item">
+      <span class="award-year">2018</span>
+      <div>
+        <p class="award-name">Young Investigator Grant</p>
+        <p class="award-org">National Ataxia Foundation</p>
+      </div>
+    </li>
+    <li class="award-item">
+      <span class="award-year">2018</span>
+      <div>
+        <p class="award-name">Sping &amp; Ying Ngoh Lin Award for Research Independence</p>
+        <p class="award-org">University of Minnesota</p>
+      </div>
+    </li>
+    <li class="award-item">
+      <span class="award-year">2018</span>
+      <div>
+        <p class="award-name">1st Place Poster — Wallin Neuroscience Discovery Day</p>
+        <p class="award-org">University of Minnesota</p>
+      </div>
+    </li>
+    <li class="award-item">
+      <span class="award-year">2018</span>
+      <div>
+        <p class="award-name">Hot Chair Travel Grant</p>
+        <p class="award-org">National Ataxia Foundation</p>
+      </div>
+    </li>
+    <li class="award-item">
+      <span class="award-year">2017</span>
+      <div>
+        <p class="award-name">Stark Award for Advanced Scholarship</p>
+        <p class="award-org">University of Minnesota</p>
+      </div>
+    </li>
+  </ul>
+
+  <h3 style="font-family:var(--sans);font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin:2rem 0 0.5rem;font-weight:500;">Technical Skills</h3>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <h4>Imaging</h4>
+      <ul>
+        <li>Two-photon in vivo imaging</li>
+        <li>Confocal microscopy</li>
+        <li>Electron microscopy</li>
+        <li>Expansion microscopy</li>
+        <li>Light-sheet microscopy</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h4>Molecular / Cellular</h4>
+      <ul>
+        <li>Single-cell RNA-seq</li>
+        <li>Viral circuit tracing</li>
+        <li>Immunohistochemistry</li>
+        <li>Mouse genetics &amp; surgery</li>
+        <li>Cell culture</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h4>Analysis</h4>
+      <ul>
+        <li>FIJI / ImageJ</li>
+        <li>Python (image analysis)</li>
+        <li>R (statistics)</li>
+        <li>Imaris 3D rendering</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h4>Disease Models</h4>
+      <ul>
+        <li>Spinocerebellar ataxia</li>
+        <li>Visual cortex plasticity</li>
+        <li>Neuro-immune models</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact" style="background:var(--surface);max-width:100%;padding:4rem clamp(1.5rem,5vw,2rem);">
+  <div class="contact-inner">
+    <div class="contact-text">
+      <h2>Get in Touch</h2>
+      <p style="margin-bottom:0.75rem;">I am actively seeking faculty and senior scientist positions. If you're interested in discussing my research or potential opportunities, please reach out.</p>
+      <p>I'm also happy to discuss potential collaborations in glial biology, advanced imaging, or neurodegenerative disease.</p>
+    </div>
+    <div>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:aferro@cshl.edu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+          aferro@cshl.edu
+        </a>
+        <a class="contact-link" href="https://www.linkedin.com/in/austin-ferro-phd-b4638987/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a class="contact-link" href="https://scholar.google.com/citations?user=997G3cYAAAAJ&hl=en" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          Google Scholar
+        </a>
+        <a class="contact-link" href="https://www.cheadlelab.com/people" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Cheadle Lab · CSHL
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © 2026 Austin Ferro &nbsp;·&nbsp; Cold Spring Harbor Laboratory &nbsp;·&nbsp;
+  <a href="https://github.com/AustinFerro/austinferro.github.io" style="color:inherit;text-decoration:none;">View source on GitHub</a>
+</footer>
+
+<script>
+  document.querySelectorAll('nav a[href^="#"]').forEach(a => {
+    a.addEventListener('click', () => {
+      document.getElementById('nav-links').classList.remove('open');
+    });
+  });
+</script>
+
+</body>
+</html>
