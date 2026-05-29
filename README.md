@@ -16,9 +16,9 @@
 
 ## About Me
 
-I am a senior postdoctoral fellow in [Dr. Lucas Cheadle's lab]([https://www.cshl.edu/research/faculty-staff/lucas-cheadle/](https://www.cheadlelab.com/)) with joint appointments at Cold Spring Harbor Laboratory (CSHL) and HHMI. My research focuses on how non-neuronal cells — astrocytes, microglia, and oligodendrocyte precursor cells (OPCs) — interact with neurons and with each other to form functional neural circuits.
+I am a senior postdoctoral fellow in [Dr. Lucas Cheadle's lab]([https://www.cshl.edu/research/faculty-staff/lucas-cheadle/](https://www.cheadlelab.com/)) with joint appointments at Cold Spring Harbor Laboratory (CSHL) and HHMI. My research focuses on how glia — astrocytes, microglia, and oligodendrocyte precursor cells (OPCs) — interact with neurons and with each other to aid in the formation and function neural circuits.
 
-I am particularly interested in how glia engage, both directly and indirectly, at the synapse to shape brain development and contribute to neurodegenerative disease. To answer these questions, I employ a range of cutting-edge imaging modalities including **single-photon** and **multiphoton microscopy**, **electron microscopy**, and custom image analysis pipelines.
+I am particularly interested in how glia engage, both directly and indirectly, at the synapse to shape brain development and contribute to neurodevelopmental and neurodegenerative diseases. To answer these questions, I employ a range of cutting-edge imaging modalities including **single-photon** and **multiphoton microscopy**, **electron microscopy**, and custom image analysis pipelines.
 
 ---
 
