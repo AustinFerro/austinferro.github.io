@@ -223,9 +223,11 @@
   /* ── MEDIA ── */
   .media-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    /* 3.16:1 renders a 16:9 and a 9:16 video at matching heights */
+    grid-template-columns: 3.16fr 1fr;
     gap: 1.5rem;
     margin-top: 0.5rem;
+    align-items: start;
   }
   .media-card {
     background: var(--surface);
@@ -338,17 +340,6 @@
     background: var(--surface);
     border-top: 1px solid var(--rule);
   }
-  .tool-figs {
-    display: grid;
-    grid-template-columns: 1fr 175px;
-    gap: 1rem;
-    align-items: start;
-  }
-  .tool-figs .tool-fig { margin-top: 0; }
-  @media (max-width: 660px) {
-    .tool-figs { grid-template-columns: 1fr; }
-  }
-
   .pub-fig {
     margin-top: 0.9rem;
     max-width: 520px;
@@ -826,6 +817,17 @@
       </div>
       <p class="media-caption">Example in vivo videos of microglia–OPC interactions</p>
     </div>
+    <div class="media-card">
+      <div class="video-wrap video-wrap--short">
+        <iframe src="https://player.vimeo.com/video/1196772084?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          title="Rotating three-dimensional reconstruction of an OPC, a microglial cell, their points of contact, and putative neuron-OPC synapses">
+        </iframe>
+      </div>
+      <p class="media-caption">Reconstruction of an OPC <span class="swatch" style="background:#c84bcc;"></span> microglia <span class="swatch" style="background:#4bcc6e;"></span> glia–glia contacts <span class="swatch" style="background:#4bccc8;"></span> and putative neuron–OPC synapses <span class="swatch" style="background:#ccb94b;"></span></p>
+    </div>
   </div>
 </section>
 
@@ -922,23 +924,10 @@
           Results aggregate across cells with paired and nonparametric tests, and cortical layer is calibrated per dataset from layer-specific pyramidal cell types rather than assumed. It grew out of the serial-EM analysis code behind my 2024 ultrastructural work.
         </p>
         <p class="tool-status">MIT licensed</p>
-        <div class="tool-figs">
-          <figure class="tool-fig">
-            <img src="Contactomics_example.png" alt="A single reconstructed oligodendrocyte precursor cell rendered in grey, with microglial contact sites marked in cyan, phagolysosomes in magenta, and neuron-OPC synapses in green distributed across its process arbor.">
-            <figcaption>A single reconstructed OPC with its microglial contact sites, phagolysosomes, and neuron–OPC synapses mapped onto the arbor</figcaption>
-          </figure>
-          <figure class="tool-fig">
-            <div class="video-wrap video-wrap--short">
-              <iframe src="https://player.vimeo.com/video/1196772084?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                title="Rotating three-dimensional reconstruction of an OPC, a microglial cell, their points of contact, and putative neuron-OPC synapses">
-              </iframe>
-            </div>
-            <figcaption>The same reconstruction rotating, with the apposed microglial cell <span class="swatch" style="background:#4bcc6e;"></span> included</figcaption>
-          </figure>
-        </div>
+        <figure class="tool-fig">
+          <img src="Contactomics_example.png" alt="A single reconstructed oligodendrocyte precursor cell rendered in grey, with microglial contact sites marked in cyan, phagolysosomes in magenta, and neuron-OPC synapses in green distributed across its process arbor.">
+          <figcaption>A single reconstructed OPC with its microglial contact sites, phagolysosomes, and neuron–OPC synapses mapped onto the arbor</figcaption>
+        </figure>
       </div>
     </li>
   </ul>
@@ -957,6 +946,10 @@
         <p class="pub-journal">Cell Reports<span class="pub-badge badge-blue">45(2):116926</span></p>
         <p style="font-size:0.8rem;color:var(--ink-light);margin-top:0.25rem;line-height:1.5;"><strong>Ferro A</strong>, Vita DJ, Fallon T, Arshad A, Boyd L, Stanley T, Lin Q, Berisha A, Vrudhula U, Gomez AM, Sanchez-Martin I, Borniger JC, Cheadle L</p>
         <a class="pub-link" href="https://doi.org/10.1016/j.celrep.2026.116926" target="_blank" rel="noopener">doi:10.1016/j.celrep.2026.116926 ↗</a>
+        <figure class="pub-fig">
+          <img src="Ferro_Fn14.jpg" alt="Graphical abstract: a hippocampal CA1 pyramidal neuron expressing Fn14 under Bmal1 and enrichment control, flanked by rod-like microglia contacting an excitatory synapse, beside a clock face and a panel listing the light-phase and dark-phase processes Fn14 regulates.">
+          <figcaption>Graphical abstract · Bmal1- and experience-regulated Fn14 in CA1 pyramidal neurons, and the light- and dark-phase processes it controls</figcaption>
+        </figure>
       </div>
     </li>
 
