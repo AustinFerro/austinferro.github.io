@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Austin Ferro, PhD | Glial Neuroscience | CSHL</title>
-<meta name="description" content="Austin Ferro, PhD – Senior Postdoctoral Fellow at Cold Spring Harbor Laboratory and HHMI. Research in glial biology, synaptic plasticity, and advanced imaging.">
+<meta name="theme-color" content="#12151a">
+<title>Austin Ferro, PhD | Neuroscience | CSHL</title>
+<meta name="description" content="Austin Ferro, PhD – Cold Spring Harbor Laboratory and HHMI. Discovering the connectivity rules of brain cells in health and disease: glia–synapse interactions, neuro-immune signaling, in vivo imaging, and open-source analysis tools.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -12,17 +13,21 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --bg: #f9f7f4;
-    --surface: #ffffff;
-    --ink: #1a1a1a;
-    --ink-mid: #4a4a4a;
-    --ink-light: #7a7a7a;
-    --rule: #e2dfd8;
-    --accent: #2c5f8a;
-    --accent-light: #e8f0f7;
-    --accent-hover: #1e4568;
-    --teal: #1d7a6e;
-    --teal-light: #e3f4f2;
+    color-scheme: dark;
+    --bg: #12151a;
+    --surface: #1a1e25;
+    --ink: #eceef2;
+    --ink-mid: #b3b9c4;
+    --ink-light: #8b93a1;
+    --rule: #2b313b;
+    --accent: #6aa9dd;
+    --accent-light: rgba(106,169,221,0.14);
+    --accent-hover: #93c3e9;
+    --accent-ink: #101318;
+    --teal: #4fc2ae;
+    --teal-light: rgba(79,194,174,0.14);
+    --warm: #e0a06a;
+    --warm-light: rgba(224,160,106,0.14);
     --serif: 'Crimson Pro', Georgia, serif;
     --sans: 'DM Sans', system-ui, sans-serif;
     --max: 860px;
@@ -45,7 +50,7 @@
     position: fixed;
     top: 0; left: 0; right: 0;
     height: var(--nav-h);
-    background: rgba(249,247,244,0.92);
+    background: rgba(18,21,26,0.88);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--rule);
     z-index: 100;
@@ -64,7 +69,7 @@
   }
   .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.6rem;
     list-style: none;
   }
   .nav-links a {
@@ -84,6 +89,7 @@
     max-width: var(--max);
     margin: 0 auto;
     padding: 5rem clamp(1.5rem, 5vw, 2rem);
+    scroll-margin-top: var(--nav-h);
   }
   section + section { border-top: 1px solid var(--rule); }
 
@@ -163,7 +169,8 @@
   }
   .btn-primary {
     background: var(--accent);
-    color: #fff;
+    color: var(--accent-ink);
+    font-weight: 500;
     border: 1px solid var(--accent);
   }
   .btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
@@ -262,6 +269,159 @@
     .media-grid { grid-template-columns: 1fr; }
   }
 
+  /* ── CURRENT WORK ── */
+  .project {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .project + .project { margin-top: 1.5rem; }
+  .project-body { padding: 1.5rem 1.6rem 1.4rem; }
+  .project-status {
+    display: inline-block;
+    font-size: 0.68rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--teal);
+    background: var(--teal-light);
+    border: 1px solid var(--teal);
+    border-radius: 999px;
+    padding: 0.2rem 0.7rem;
+    margin-bottom: 0.85rem;
+  }
+  .project-title {
+    font-family: var(--serif);
+    font-size: 1.22rem;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+  }
+  .project-authors {
+    font-size: 0.78rem;
+    color: var(--ink-light);
+    line-height: 1.55;
+    margin-bottom: 0.85rem;
+  }
+  .project-desc {
+    font-size: 0.89rem;
+    line-height: 1.7;
+    color: var(--ink-mid);
+  }
+  .project-desc + .project-desc { margin-top: 0.85rem; }
+  .project-foot {
+    margin-top: 1.1rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    font-size: 0.78rem;
+    color: var(--ink-light);
+  }
+  .project-foot a { color: var(--accent); text-decoration: none; }
+  .project-foot a:hover { text-decoration: underline; }
+  .tool-fig {
+    margin-top: 1.1rem;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+    background: #000;
+  }
+  .tool-fig img { display: block; width: 100%; height: auto; }
+  .tool-fig figcaption {
+    font-size: 0.76rem;
+    line-height: 1.5;
+    color: var(--ink-light);
+    padding: 0.6rem 0.8rem;
+    background: var(--surface);
+    border-top: 1px solid var(--rule);
+  }
+  .tool-figs {
+    display: grid;
+    grid-template-columns: 1fr 175px;
+    gap: 1rem;
+    align-items: start;
+  }
+  .tool-figs .tool-fig { margin-top: 0; }
+  @media (max-width: 660px) {
+    .tool-figs { grid-template-columns: 1fr; }
+  }
+
+  .pub-fig {
+    margin-top: 0.9rem;
+    max-width: 520px;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+    background: #000;
+  }
+  .pub-fig img { display: block; width: 100%; height: auto; }
+  .pub-fig figcaption {
+    font-size: 0.74rem;
+    line-height: 1.5;
+    color: var(--ink-light);
+    padding: 0.5rem 0.7rem;
+    background: var(--surface);
+    border-top: 1px solid var(--rule);
+  }
+
+  /* ── RESEARCH LEDE ── */
+  .lede {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: var(--ink-mid);
+    max-width: 64ch;
+  }
+  .lede + .lede { margin-top: 1rem; }
+  .lede strong { color: var(--ink); font-weight: 600; }
+  .lede-rule {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 2.5rem 0 2rem;
+  }
+
+  /* ── TOOLS ── */
+  .tool-list { list-style: none; }
+  .tool-item {
+    display: grid;
+    grid-template-columns: 175px 1fr;
+    gap: 1.5rem;
+    padding: 1.6rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .tool-item:first-child { border-top: 1px solid var(--rule); }
+  .tool-name {
+    font-family: var(--serif);
+    font-size: 1.18rem;
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.25;
+  }
+  .tool-kind {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-top: 0.35rem;
+  }
+  .tool-desc {
+    font-size: 0.89rem;
+    line-height: 1.7;
+    color: var(--ink-mid);
+  }
+  .tool-desc + .tool-desc { margin-top: 0.6rem; }
+  .tool-status {
+    margin-top: 0.7rem;
+    font-size: 0.78rem;
+    color: var(--ink-light);
+  }
+  @media (max-width: 660px) {
+    .tool-item { grid-template-columns: 1fr; gap: 0.6rem; }
+  }
+
   /* ── RESEARCH ── */
   .research-grid {
     display: grid;
@@ -287,7 +447,7 @@
   }
   .ic-blue { background: var(--accent-light); color: var(--accent); }
   .ic-teal { background: var(--teal-light); color: var(--teal); }
-  .ic-warm { background: #fef3ea; color: #a0520a; }
+  .ic-warm { background: var(--warm-light); color: var(--warm); }
   .research-card h3 {
     font-family: var(--sans);
     font-size: 0.9rem;
@@ -388,6 +548,52 @@
   }
 
   /* ── CV TIMELINE ── */
+  .cv-head {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin: 2.5rem 0 0.6rem;
+  }
+  .cv-head:first-of-type { margin-top: 2rem; }
+  .cv-list { list-style: none; }
+  .cv-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .cv-row:first-child { border-top: 1px solid var(--rule); }
+  .cv-year {
+    font-size: 0.78rem;
+    color: var(--ink-light);
+    letter-spacing: 0.03em;
+    padding-top: 0.1rem;
+  }
+  .cv-what {
+    font-size: 0.87rem;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .cv-where {
+    display: block;
+    font-size: 0.79rem;
+    color: var(--ink-light);
+    margin-top: 0.1rem;
+  }
+  .cv-note {
+    font-size: 0.83rem;
+    color: var(--ink-mid);
+    line-height: 1.65;
+    margin-top: 0.9rem;
+  }
+  @media (max-width: 660px) {
+    .cv-row { grid-template-columns: 72px 1fr; gap: 0.75rem; }
+  }
+
   .timeline { list-style: none; }
   .tl-item {
     display: grid;
@@ -470,17 +676,8 @@
   }
 
   /* ── RESPONSIVE ── */
-  @media (max-width: 660px) {
-    #hero {
-      grid-template-columns: 1fr;
-      padding-top: 4rem;
-    }
-    .gif-frame {
-      width: 120px;
-      position: absolute;
-      top: 4.5rem;
-      right: 1.5rem;
-    }
+  /* seven links need more room than the old 660px breakpoint allowed */
+  @media (max-width: 900px) {
     .nav-links { display: none; }
     .nav-links.open {
       display: flex;
@@ -494,9 +691,20 @@
       gap: 1rem;
     }
     .hamburger { display: block; }
+  }
+
+  @media (max-width: 660px) {
+    #hero {
+      grid-template-columns: 1fr;
+      padding-top: 4rem;
+    }
+    .gif-frame {
+      width: 160px;
+      order: -1;
+      margin-bottom: 0.5rem;
+    }
     .contact-inner { grid-template-columns: 1fr; }
     .tl-item { grid-template-columns: 80px 1fr; }
-    #hero { position: relative; }
   }
 </style>
 </head>
@@ -505,8 +713,10 @@
 <nav>
   <a href="#hero" class="nav-name">Austin Ferro, PhD</a>
   <ul class="nav-links" id="nav-links">
+    <li><a href="#current">Current</a></li>
     <li><a href="#media">Media</a></li>
     <li><a href="#research">Research</a></li>
+    <li><a href="#tools">Tools</a></li>
     <li><a href="#publications">Publications</a></li>
     <li><a href="#cv">CV</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -528,15 +738,15 @@
     <p class="hero-eyebrow">Cold Spring Harbor Laboratory &amp; HHMI</p>
     <h1>Austin Ferro<br><em>PhD</em></h1>
     <p class="hero-bio">
-      I am a senior postdoctoral fellow in the Cheadle Lab studying how glial cells sculpt and maintain neural circuits. My work spans glial biology, neuro-immune interactions, and synaptic plasticity — using advanced imaging approaches to watch cells interact in the living brain.
+      I study the connectivity rules of the brain: the logic by which brain cells find, contact, and remodel one another. A century after Golgi and Cajal argued over how neurons connect, we can finally test that logic at incredible resolutions. I am interested in going beyond the unidirectional connectivity patterns of neurons by incorporating how glia integrate into neural circuits to assess how these multiunit-multidirectional connectivity patterns shape circuits in neurodevelopment, adult cognition, and in neurological disorders.
     </p>
     <div class="hero-tags">
-      <span class="tag">Glial Biology</span>
-      <span class="tag">Synaptic Plasticity</span>
-      <span class="tag">Neuro-Immune Interactions</span>
-      <span class="tag teal">Two-Photon Imaging</span>
-      <span class="tag teal">Electron Microscopy</span>
-      <span class="tag teal">OPCs &amp; Microglia</span>
+      <span class="tag">Connectivity Rules</span>
+      <span class="tag">Glia–Synapse Interactions</span>
+      <span class="tag">Neuro-Immune Signaling</span>
+      <span class="tag teal">In Vivo Two-Photon Imaging</span>
+      <span class="tag teal">Connectomics &amp; sTEM</span>
+      <span class="tag teal">Open-Source Tool Development</span>
     </div>
     <div class="hero-links">
       <a class="btn btn-primary" href="AUSTIN FERRO_CV2026.docx" download>
@@ -556,8 +766,47 @@
       src="scene4_opc_microglia_contacts_synapses.gif"
       alt="Live two-photon microscopy: OPC–microglia contacts and synapses"
     />
-    <p class="gif-caption">OPC–microglia contacts &amp; synapses · sTEM data from mouse V1</p>
+    <p class="gif-caption">OPC–microglia contacts &amp; synapses · live two-photon imaging</p>
   </div>
+</section>
+
+<!-- ── CURRENT WORK ── -->
+<section id="current">
+  <h2>Current Work</h2>
+
+  <article class="project project--stack">
+    <div class="project-body">
+      <span class="project-status">In preparation</span>
+      <h3 class="project-title">Glia–glia crosstalk: homeostatic control of OPC form and function by microglia</h3>
+      <p class="project-authors"><strong>Ferro A</strong>†, Ademola A, Kahng J, Zhang C, Vita DJ, Chan G, Lin Q, Fallon T, Monteiro J, McNamara N, Miron V, Trottman J, Bergles D, Cheadle L† &nbsp;<em>(† co-corresponding)</em></p>
+      <p class="project-desc">
+        Oligodendrocyte precursor cells are the only non-neuronal cells in the central nervous system that receive direct synaptic input from neurons, yet what sets and maintains their synaptic and morphological state has remained unclear. Combining three-channel in vivo imaging in awake mice on a custom two-photon microscope I built, machine-learning analysis of serial transmission electron microscopy and super-resolution volumes, whole-cell slice electrophysiology, and single-cell transcriptomics, I find that microglia dynamically and homeostatically survey and control OPC process arbors in both mouse and human tissue.
+      </p>
+      <p class="project-desc">
+        Microglia converge on neuron–OPC and neuron–neuron synapses alike, form contacts enriched near neuron–OPC synapses and OPC phagolysosomes, and set both the density of OPC synapses and the rate at which OPCs engulf them. Together this identifies glia–glia crosstalk as a control point for the noncanonical neuron–OPC synapse.
+      </p>
+      <div class="project-foot">
+        <span>Presented at NYU SPiNES · MGH · Hospital del Mar · SfN minisymposium</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="project project--stack">
+    <div class="project-body">
+      <span class="project-status">In preparation</span>
+      <h3 class="project-title">SNACC: open-source, model-independent quantification of cell–cell interactions and engulfment in three-dimensional tissue volumes</h3>
+      <p class="project-authors">Fallon T, Cheadle L, <strong>Ferro A</strong>† &nbsp;<em>(† corresponding)</em></p>
+      <p class="project-desc">
+        Segmented Neighbor Analysis of Cellular Components is a Python framework for measuring cell-cell interactions in three-dimensional fluorescence volumes. SNACC provides a GUI interface to segmented objects from any model and reports interaction and engulfment metrics without requiring a bespoke classifier for each new experiment, using Cellpose models trained against OPCs, microglia, synaptic material, and lysosomal organelles and adapted for the highly ramified morphologies of glia.
+      </p>
+      <p class="project-desc">
+        As proof of principle, SNACC was used to test whether pharmacological inhibition of the TAM receptors Tyro3, Axl, and MerTK reduces glial phagocytosis of synapses in mouse cortex.
+      </p>
+      <div class="project-foot">
+        <span>Builds on the engulfment protocol in <em>Nature Protocols</em> (2024)</span>
+      </div>
+    </div>
+  </article>
 </section>
 
 <!-- ── MEDIA ── -->
@@ -565,18 +814,6 @@
   <h2>Research in Motion</h2>
   <p class="section-sub">Microscopy footage from the lab</p>
   <div class="media-grid">
-    <div class="media-card">
-      <div class="video-wrap video-wrap--short">
-        <iframe src="https://player.vimeo.com/video/1196772084?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          title="Reconstruction of an OPC, microglia, glia-glia contacts, and putative neuron-OPC synapses">
-        </iframe>
-      </div>
-      <script src="https://player.vimeo.com/api/player.js"></script>
-      <p class="media-caption">Reconstruction of an OPC <span class="swatch" style="background:#c84bcc;"></span> microglia <span class="swatch" style="background:#4bcc6e;"></span> glia–glia contacts <span class="swatch" style="background:#4bccc8;"></span> with putative neuron–OPC synapses <span class="swatch" style="background:#ccb94b;"></span></p>
-    </div>
     <div class="media-card">
       <div class="video-wrap video-wrap--wide">
         <iframe
@@ -595,7 +832,17 @@
 <!-- ── RESEARCH ── -->
 <section id="research">
   <h2>Research</h2>
-  <p class="section-sub">Understanding how glial cells build, maintain, and remodel the brain's wiring</p>
+  <p class="section-sub">Discovering the connectivity rules of brain cells in health and disease</p>
+
+  <p class="lede">
+    The ideological battle between Camillo Golgi's reticular theory and Santiago Ramón y Cajal's neuron doctrine was fought with relatively crude methods for assessing intercellular contact. We now have the technology to discover the logic underlying cellular connectivity directly, at resolutions with the potential to reshape our understanding of brain physiology as profoundly as the refutation of the reticular theory did. Pairing single-cell calcium imaging with cortical connectomics, for instance, has already begun to reveal rules that govern synaptic patterning and its relation to neural function.
+  </p>
+  <p class="lede">
+    Yet a century of this work has concentrated on unidirectional connectivity between neurons, and has largely ignored how non-neuronal glia integrate into circuits — even as glial modulation of circuits, both during development and in the adult brain, becomes increasingly well appreciated. <strong>That reductive view limits our understanding of how neural circuits truly form and function, and points to the need to elucidate the rules governing how glia interact with neurons, how they interact with one another, and how those interactions go awry in neurological disorders.</strong> I am building a research program around the holistic logic of how brain cells structurally and functionally interact, and how those connectivity patterns shape neurodevelopment and adult cognition in health and disease.
+  </p>
+
+  <hr class="lede-rule">
+
   <div class="research-grid">
     <div class="research-card">
       <div class="research-card-icon ic-teal">
@@ -626,6 +873,82 @@
       Single &amp; multi-photon in vivo imaging &nbsp;·&nbsp; Electron microscopy &nbsp;·&nbsp; Expansion microscopy &nbsp;·&nbsp; Single-cell RNA-seq &nbsp;·&nbsp; Viral circuit tracing &nbsp;·&nbsp; Mouse behavioral paradigms &nbsp;·&nbsp; Quantitative image analysis (FIJI/Python)
     </p>
   </div>
+</section>
+
+<!-- ── TOOLS ── -->
+<section id="tools">
+  <h2>Tool Development</h2>
+  <p class="section-sub">I am a firm believer in open source toolkits that increase the accessibility and reach of science</p>
+
+  <hr class="lede-rule">
+
+  <ul class="tool-list">
+    <li class="tool-item">
+      <div>
+        <p class="tool-name">C3P2</p>
+        <p class="tool-kind">In vivo time-lapse</p>
+      </div>
+      <div>
+        <p class="tool-desc">
+          An unattended batch pipeline for three-channel two-photon recordings, asking whether microglia preferentially survey OPC-associated synapses and whether an experimental manipulation changes how often or how long they do so. C3P2 segments synapses, neurites, microglia, and OPCs with per-channel Cellpose models, corrects three-dimensional drift between timepoints, and tracks each synapse to a stable identity across the whole recording, so the same synapse can be followed through a manipulation.
+        </p>
+        <p class="tool-desc">
+          Contact is reported per epoch as probability, frequency, mean event duration, and total contact time, measured in parallel by proximity and by voxel overlap so that converging effects raise confidence. Segmentation is cached and per-recording failures are isolated, so one bad file never stops a batch. Outputs are CSVs, QC colocalization hyperstacks, Fiji ROI sets, and mutually registered 3D meshes.
+        </p>
+        <p class="tool-status">Used for the glia–glia crosstalk manuscript</p>
+      </div>
+    </li>
+
+    <li class="tool-item">
+      <div>
+        <p class="tool-name">SNACC</p>
+        <p class="tool-kind">Fixed tissue</p>
+      </div>
+      <div>
+        <p class="tool-desc">
+          Segmented Neighbor Analysis of Cellular Components (SNACC) quantifies cell–cell interactions and engulfment in three-dimensional fluorescence volumes. It is model-independent: segmented objects from any model can be passed in, and SNACC returns neighbor, contact, and engulfment metrics per cell and per object. Cellpose models trained against OPCs, microglia, synaptic material, and lysosomal organelles ship alongside it, with output adapted for the highly ramified morphologies of glia.
+        </p>
+        <p class="tool-status">Manuscript in preparation · public release to follow</p>
+        <figure class="tool-fig">
+          <img src="SNACC_Example.png" alt="Side-by-side comparison: a raw grayscale fluorescence field of densely ramified microglia on the left, and the same field on the right with each cell resolved as a separately coloured instance mask.">
+          <figcaption>Raw microglia channel (left) and SNACC instance segmentation (right). Each cell is resolved separately despite heavily overlapping process arbors.</figcaption>
+        </figure>
+      </div>
+    </li>
+
+    <li class="tool-item">
+      <div>
+        <p class="tool-name">Contactomics</p>
+        <p class="tool-kind">Serial EM &amp; connectomics</p>
+      </div>
+      <div>
+        <p class="tool-desc">
+          A spatial-statistics pipeline asking whether cell-cell contact sites are non-randomly positioned relative to features on the cell surface, built against the MICrONS and H0 cubic-millimeter volumes of mouse visual cortex and human temporal cortex. For proof of principle, I use Contactomics to voxelize OPC and microglial meshes to find the shared voxels that constitute a contact, query axon-to-OPC synapses from CAVE, and test observed contact-to-synapse distances against Monte Carlo null models, with a parallel permutation test against skeleton branch points.
+        </p>
+        <p class="tool-desc">
+          Results aggregate across cells with paired and nonparametric tests, and cortical layer is calibrated per dataset from layer-specific pyramidal cell types rather than assumed. It grew out of the serial-EM analysis code behind my 2024 ultrastructural work.
+        </p>
+        <p class="tool-status">MIT licensed</p>
+        <div class="tool-figs">
+          <figure class="tool-fig">
+            <img src="Contactomics_example.png" alt="A single reconstructed oligodendrocyte precursor cell rendered in grey, with microglial contact sites marked in cyan, phagolysosomes in magenta, and neuron-OPC synapses in green distributed across its process arbor.">
+            <figcaption>A single reconstructed OPC with its microglial contact sites, phagolysosomes, and neuron–OPC synapses mapped onto the arbor</figcaption>
+          </figure>
+          <figure class="tool-fig">
+            <div class="video-wrap video-wrap--short">
+              <iframe src="https://player.vimeo.com/video/1196772084?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                title="Rotating three-dimensional reconstruction of an OPC, a microglial cell, their points of contact, and putative neuron-OPC synapses">
+              </iframe>
+            </div>
+            <figcaption>The same reconstruction rotating, with the apposed microglial cell <span class="swatch" style="background:#4bcc6e;"></span> included</figcaption>
+          </figure>
+        </div>
+      </div>
+    </li>
+  </ul>
 </section>
 
 <!-- ── PUBLICATIONS ── -->
@@ -661,6 +984,10 @@
         <p class="pub-journal">Nature Neuroscience<span class="pub-badge badge-teal">★ Equal contributions</span></p>
         <p style="font-size:0.8rem;color:var(--ink-light);margin-top:0.25rem;line-height:1.5;"><strong>Ferro A</strong>*, Auguste YSS*, Kahng JA, Xavier AM, Dixon JR, Vrudhula U, Nichitiu AS, Rosado D, Wee TL, Pedmale UV, Cheadle L &nbsp;<em>(* equal contributions)</em></p>
         <a class="pub-link" href="https://doi.org/10.1038/s41593-022-01170-x" target="_blank" rel="noopener">doi:10.1038/s41593-022-01170-x ↗</a>
+        <figure class="pub-fig">
+          <img src="Auguste_Ferro_2022_abstract.png" alt="Graphical abstract: a developmental timeline from P0 to P27 marking initial patterning, eye opening and the sensory experience window, above panels showing an OPC surrounded by microglia engulfing VGluT2 synaptic material, and the reduced engulfment seen after microglial depletion with PLX.">
+          <figcaption>Graphical abstract · OPC engulfment of VGluT2 inputs rises with sensory experience and is reduced by microglial depletion</figcaption>
+        </figure>
       </div>
     </li>
 
@@ -676,59 +1003,208 @@
   <h2>CV Highlights</h2>
   <p class="section-sub">Full CV available for download above</p>
 
-  <h3 style="font-family:var(--sans);font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin:2rem 0 0.5rem;font-weight:500;">Positions</h3>
+  <h3 class="cv-head">Positions and appointments</h3>
   <ul class="timeline">
     <li class="tl-item">
-      <span class="tl-dates">2020–Present</span>
+      <span class="tl-dates">2025–Present</span>
       <div>
-        <p class="tl-role">Senior Postdoctoral Fellow</p>
-        <p class="tl-place">Cheadle Lab · Cold Spring Harbor Laboratory &amp; HHMI</p>
-        <p class="tl-detail">Glial control of synaptic plasticity; OPC–synapse engulfment; live two-photon imaging in awake mice</p>
+        <p class="tl-role">Research Specialist II</p>
+        <p class="tl-place">Cheadle Lab · Howard Hughes Medical Institute, Cold Spring Harbor, NY</p>
+        <p class="tl-detail">Microglial control of OPC form and function; custom three-channel two-photon imaging; open-source analysis pipelines</p>
+      </div>
+    </li>
+    <li class="tl-item">
+      <span class="tl-dates">2020–2025</span>
+      <div>
+        <p class="tl-role">Postdoctoral Fellow</p>
+        <p class="tl-place">Cheadle Lab · Cold Spring Harbor Laboratory, Cold Spring Harbor, NY</p>
+        <p class="tl-detail">OPC-mediated synaptic refinement in visual cortex; TWEAK–Fn14 signaling and the regulation of neuronal activity</p>
       </div>
     </li>
     <li class="tl-item">
       <span class="tl-dates">2015–2020</span>
       <div>
         <p class="tl-role">PhD, Neuroscience</p>
-        <p class="tl-place">Cvetanovic Lab · University of Minnesota</p>
-        <p class="tl-detail">Thesis: Role of microglia and astrocytes in spinocerebellar ataxia type 1. F31 NIH Fellow.</p>
+        <p class="tl-place">Cvetanovic and Araque Labs · University of Minnesota, Twin Cities</p>
+        <p class="tl-detail">Disease-modifying functions of microglia and astroglia in spinocerebellar ataxia type 1. NIH F31 fellow.</p>
       </div>
     </li>
     <li class="tl-item">
       <span class="tl-dates">2011–2015</span>
       <div>
         <p class="tl-role">B.A., Neuroscience</p>
-        <p class="tl-place">Skidmore College</p>
+        <p class="tl-place">Skidmore College, Saratoga Springs, NY</p>
+        <p class="tl-detail">Lagalwar Lab · mitochondrial dysfunction and neurodegeneration in SCA1</p>
       </div>
     </li>
   </ul>
 
+  <h3 class="cv-head">Grants and fellowships</h3>
+  <ul class="cv-list">
+    <li class="cv-row">
+      <span class="cv-year">2018–2020</span>
+      <div class="cv-what">NIH F31 NS103392-01A1 · NINDS predoctoral fellowship
+        <span class="cv-where">Principal investigator</span>
+      </div>
+    </li>
+    <li class="cv-row">
+      <span class="cv-year">2018</span>
+      <div class="cv-what">Young Investigator Grant, National Ataxia Foundation
+        <span class="cv-where">Principal investigator</span>
+      </div>
+    </li>
+    <li class="cv-row">
+      <span class="cv-year">2018</span>
+      <div class="cv-what">Sping and Ying Ngoh Lin Award for Research Independence
+        <span class="cv-where">University of Minnesota · Principal investigator</span>
+      </div>
+    </li>
+  </ul>
 
-  <h3 style="font-family:var(--sans);font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin:2rem 0 0.5rem;font-weight:500;">Technical Skills</h3>
+  <h3 class="cv-head">Selected honors and awards</h3>
+  <ul class="cv-list">
+    <li class="cv-row">
+      <span class="cv-year">2026</span>
+      <div class="cv-what">Scientific Breakthrough Award
+        <span class="cv-where">Cold Spring Harbor Laboratory</span>
+      </div>
+    </li>
+    <li class="cv-row">
+      <span class="cv-year">2025</span>
+      <div class="cv-what">Lecture selection, SPiNES
+        <span class="cv-where">NYU Neuroscience Institute</span>
+      </div>
+    </li>
+    <li class="cv-row">
+      <span class="cv-year">2018</span>
+      <div class="cv-what">First place, Wallin Neuroscience Discovery Day poster competition
+        <span class="cv-where">University of Minnesota</span>
+      </div>
+    </li>
+    <li class="cv-row">
+      <span class="cv-year">2017</span>
+      <div class="cv-what">Stark Award
+        <span class="cv-where">University of Minnesota</span>
+      </div>
+    </li>
+    <li class="cv-row">
+      <span class="cv-year">2015</span>
+      <div class="cv-what">Hartnett Prize for Undergraduate Research
+        <span class="cv-where">Skidmore College</span>
+      </div>
+    </li>
+  </ul>
+
+  <h3 class="cv-head">Selected invited talks</h3>
+  <ul class="cv-list">
+    <li class="cv-row">
+      <span class="cv-year">2026</span>
+      <div class="cv-what">SPiNES seminar, NYU Neuroscience Institute
+        <span class="cv-where">New York, NY</span>
+      </div>
+    </li>
+    <li class="cv-row">
+      <span class="cv-year">2025</span>
+      <div class="cv-what">Mucosal Immunology and Biology Research Center
+        <span class="cv-where">Massachusetts General Hospital, Boston, MA</span>
+      </div>
+    </li>
+    <li class="cv-row">
+      <span class="cv-year">2025</span>
+      <div class="cv-what">Hospital del Mar Research Institute
+        <span class="cv-where">Barcelona, Spain</span>
+      </div>
+    </li>
+    <li class="cv-row">
+      <span class="cv-year">2024</span>
+      <div class="cv-what">Minisymposium, Society for Neuroscience
+        <span class="cv-where">Chicago, IL</span>
+      </div>
+    </li>
+    <li class="cv-row">
+      <span class="cv-year">2024</span>
+      <div class="cv-what">CSHL Glia meeting
+        <span class="cv-where">Cold Spring Harbor, NY</span>
+      </div>
+    </li>
+    <li class="cv-row">
+      <span class="cv-year">2017</span>
+      <div class="cv-what">International Astrocyte School
+        <span class="cv-where">Bertinoro, Italy</span>
+      </div>
+    </li>
+  </ul>
+
+  <h3 class="cv-head">Mentoring, teaching and service</h3>
+  <ul class="cv-list">
+    <li class="cv-row">
+      <span class="cv-year">Ongoing</span>
+      <div class="cv-what">Peer reviewer
+        <span class="cv-where">Cell Reports · Neuroscience · Acta Neuropathologica Communications</span>
+      </div>
+    </li>
+    <li class="cv-row">
+      <span class="cv-year">2013–Present</span>
+      <div class="cv-what">Research mentor to more than twenty trainees
+        <span class="cv-where">High school through postdoctoral, across CSHL, the University of Minnesota, and Skidmore College · lab technique, experimental design, coding, and grantsmanship</span>
+      </div>
+    </li>
+    <li class="cv-row">
+      <span class="cv-year">2019</span>
+      <div class="cv-what">Guest lecturer, neuroscience capstone (NEUR395)
+        <span class="cv-where">Carleton College, Northfield, MN</span>
+      </div>
+    </li>
+    <li class="cv-row">
+      <span class="cv-year">2019</span>
+      <div class="cv-what">President, Glia Journal Club
+        <span class="cv-where">University of Minnesota · biweekly club on glia in health and disease</span>
+      </div>
+    </li>
+    <li class="cv-row">
+      <span class="cv-year">2018</span>
+      <div class="cv-what">Guest lecturer, Cellular Signaling in the Nervous System
+        <span class="cv-where">Macalester College, St. Paul, MN</span>
+      </div>
+    </li>
+    <li class="cv-row">
+      <span class="cv-year">2017</span>
+      <div class="cv-what">Teaching assistant, Introduction to Neurobiology II
+        <span class="cv-where">University of Minnesota</span>
+      </div>
+    </li>
+  </ul>
+
+  <h3 class="cv-head">Technical skills</h3>
   <div class="skills-grid">
     <div class="skill-group">
       <h4>Imaging</h4>
       <ul>
-        <li>Two-photon in vivo imaging</li>
+        <li>In vivo multiphoton imaging</li>
+        <li>Custom microscope design &amp; build</li>
+        <li>Serial transmission EM</li>
+        <li>Expansion &amp; super-resolution</li>
         <li>Confocal microscopy</li>
-        <li>Electron microscopy</li>
       </ul>
     </div>
     <div class="skill-group">
-      <h4>Molecular / Cellular</h4>
+      <h4>Molecular &amp; physiological</h4>
       <ul>
+        <li>Whole-cell slice electrophysiology</li>
         <li>Single-cell RNA-seq</li>
-        <li>Viral circuit tracing</li>
+        <li>Viral tool design &amp; circuit tracing</li>
+        <li>Mouse genetics &amp; cranial surgery</li>
+        <li>Mouse behavior</li>
         <li>Immunohistochemistry</li>
-        <li>Mouse genetics &amp; surgery</li>
-        <li>Cell culture</li>
       </ul>
     </div>
     <div class="skill-group">
-      <h4>Analysis</h4>
+      <h4>Computational</h4>
       <ul>
+        <li>Python package development</li>
+        <li>Deep-learning segmentation (Cellpose)</li>
+        <li>Connectomics analysis (CAVE, MeshParty)</li>
         <li>FIJI / ImageJ</li>
-        <li>Python (image analysis)</li>
         <li>Imaris 3D rendering</li>
         <li>MATLAB</li>
       </ul>
