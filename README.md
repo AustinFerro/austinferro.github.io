@@ -59,7 +59,7 @@ J. A. Kahng, A. M. Xavier, **A. Ferro**, S. X. Tang, Y. S. S. Auguste, L. Cheadl
 
 ## CV
 
-📄 [Download CV (2026)](AUSTIN%20FERRO_CV2026.docx)
+📄 [Download CV (2026)](AUSTIN%20FERRO_CV2026.pdf)
 
 ---
 
