@@ -221,15 +221,42 @@
   }
 
   /* ── MEDIA ── */
-  .media-grid {
-    display: grid;
-    /* 3.16:1 renders a 16:9 and a 9:16 video at matching heights */
-    grid-template-columns: 3.16fr 1fr;
-    gap: 1.5rem;
+  /* Horizontal snap-scrolling gallery. On wide screens every clip is locked to
+     the same height and its width follows its aspect ratio, so a 16:9 and a
+     9:16 sit in one tidy row. On narrow screens that flips: equal widths,
+     natural heights. */
+  .media-scroller {
+    --gal-h: 380px;
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
     margin-top: 0.5rem;
-    align-items: start;
+    padding-bottom: 0.9rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--rule) transparent;
   }
+  .media-scroller:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 5px;
+    border-radius: 4px;
+  }
+  .media-scroller::-webkit-scrollbar { height: 8px; }
+  .media-scroller::-webkit-scrollbar-track { background: transparent; }
+  .media-scroller::-webkit-scrollbar-thumb {
+    background: var(--rule);
+    border-radius: 99px;
+  }
+  .media-scroller::-webkit-scrollbar-thumb:hover { background: var(--ink-light); }
+
   .media-card {
+    flex: 0 0 auto;
+    /* without this the caption text, not the video, would set the card width */
+    width: min-content;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
     background: var(--surface);
     border: 1px solid var(--rule);
     border-radius: 8px;
@@ -237,21 +264,24 @@
   }
   .video-wrap {
     position: relative;
-    width: 100%;
+    /* fixed height + aspect-ratio lets the browser derive the width, so a card
+       of any proportion drops into the row without new CSS */
+    aspect-ratio: var(--ar, 16 / 9);
+    height: var(--gal-h);
     background: #000;
   }
-  .video-wrap--short {
-    padding-bottom: 177.78%;
-  }
-  .video-wrap--wide {
-    padding-bottom: 56.25%;
-  }
-  .video-wrap iframe {
+  .video-wrap--wide { --ar: 16 / 9; }
+  .video-wrap--short { --ar: 9 / 16; }
+  .video-wrap iframe,
+  .video-wrap video,
+  .video-wrap img {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
     border: none;
   }
+  .video-wrap img,
+  .video-wrap video { object-fit: contain; }
   .media-caption {
     font-size: 0.78rem;
     color: var(--ink-mid);
@@ -268,7 +298,12 @@
     margin: 0 1px;
   }
   @media (max-width: 660px) {
-    .media-grid { grid-template-columns: 1fr; }
+    /* flip to equal widths so a portrait clip can't run off the screen, and
+       let each card keep its own height — stretching leaves a void under the
+       shorter clip when only one card is visible at a time */
+    .media-scroller { align-items: flex-start; }
+    .media-card { width: 84vw; max-width: 420px; }
+    .video-wrap { height: auto; width: 100%; }
   }
 
   /* ── CURRENT WORK ── */
@@ -804,7 +839,7 @@
 <section id="media">
   <h2>Imaging Gallery</h2>
   <p class="section-sub">Live and reconstructed microscopy from my own recordings</p>
-  <div class="media-grid">
+  <div class="media-scroller" tabindex="0" role="region" aria-label="Imaging gallery, scroll horizontally for more clips">
     <div class="media-card">
       <div class="video-wrap video-wrap--wide">
         <iframe
@@ -826,7 +861,21 @@
           title="Rotating three-dimensional reconstruction of an OPC, a microglial cell, their points of contact, and putative neuron-OPC synapses">
         </iframe>
       </div>
-      <p class="media-caption">Reconstruction of an OPC <span class="swatch" style="background:#c84bcc;"></span> microglia <span class="swatch" style="background:#4bcc6e;"></span> glia–glia contacts <span class="swatch" style="background:#4bccc8;"></span> and putative neuron–OPC synapses <span class="swatch" style="background:#ccb94b;"></span></p>
+      <p class="media-caption">OPC <span class="swatch" style="background:#c84bcc;"></span> microglia <span class="swatch" style="background:#4bcc6e;"></span> contacts <span class="swatch" style="background:#4bccc8;"></span> neuron–OPC synapses <span class="swatch" style="background:#ccb94b;"></span></p>
+    </div>
+    <div class="media-card">
+      <div class="video-wrap" style="--ar: 1107 / 1125; background:#fff;">
+        <img src="Neuron_OPC_Synapse_Example.png" alt="A reconstructed pyramidal neuron in grey with an OPC in green overlapping its arbor, synapses marked as coloured spheres, alongside a magnified inset showing OPC processes wrapping a dendrite studded with synapses.">
+      </div>
+      <p class="media-caption">Image of an OPC (green), neighboring neuron (grey) and synapse colored by presynaptic partner cell type innervation from the MICrONS dataset of mouse visual cortex.</p>
+    </div>
+    <div class="media-card">
+      <div class="video-wrap" style="--ar: 1984 / 1344;">
+        <video src="SNACC_Animation.mp4" poster="SNACC_Animation_poster.jpg"
+          controls preload="none" playsinline
+          aria-label="Animated SNACC output showing quantification of OPC-synapse interactions"></video>
+      </div>
+      <p class="media-caption">Example SNACC output quantifying OPC–synapse interactions.</p>
     </div>
   </div>
 </section>
