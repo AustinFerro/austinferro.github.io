@@ -181,6 +181,12 @@
   }
   .btn-outline:hover { border-color: var(--ink-mid); color: var(--ink); background: var(--surface); }
 
+  .hero-media {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .headshot-frame { background: var(--surface); }
   .gif-frame {
     flex-shrink: 0;
     width: 200px;
@@ -724,11 +730,14 @@
       grid-template-columns: 1fr;
       padding-top: 4rem;
     }
-    .gif-frame {
-      width: 160px;
+    .hero-media {
       order: -1;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 0.75rem;
       margin-bottom: 0.5rem;
     }
+    .hero-media .gif-frame { width: auto; flex: 1 1 0; min-width: 0; }
     .contact-inner { grid-template-columns: 1fr; }
     .tl-item { grid-template-columns: 80px 1fr; }
   }
@@ -762,9 +771,9 @@
 <section id="hero">
   <div>
     <p class="hero-eyebrow">Cold Spring Harbor Laboratory &amp; HHMI</p>
-    <h1>Austin Ferro<br><em>PhD</em></h1>
+    <h1>Austin Ferro, <em>PhD</em></h1>
     <p class="hero-bio">
-      I study the connectivity rules of the brain: the logic by which brain cells find, contact, and remodel one another. A century after Golgi and Cajal argued over how neurons connect, we can finally test that logic at incredible resolutions. I am interested in going beyond the unidirectional connectivity patterns of neurons by incorporating how glia integrate into neural circuits to assess how these multiunit-multidirectional connectivity patterns shape circuits in neurodevelopment, adult cognition, and in neurological disorders.
+      I am a research scientist at CSHL where I study the connectivity rules of the brain: the logic by which brain cells find, contact, and remodel one another. A century after Golgi and Cajal argued over how neurons connect, we can finally test that logic at incredible resolutions. I am interested in going beyond the unidirectional connectivity patterns of neurons by incorporating how glia integrate into neural circuits to assess how these multiunit-multidirectional connectivity patterns shape circuits in neurodevelopment, adult cognition, and in neurological disorders.
     </p>
     <div class="hero-tags">
       <span class="tag">Connectivity Rules</span>
@@ -775,7 +784,11 @@
       <span class="tag teal">Open-Source Tool Development</span>
     </div>
     <div class="hero-links">
-      <a class="btn btn-primary" href="AUSTIN FERRO_CV2026.pdf" download>
+      <a class="btn btn-primary" href="mailto:ferro@cshl.edu">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="3" width="13" height="10" rx="1.5"/><path d="M2 4.5 8 9l6-4.5"/></svg>
+        Email
+      </a>
+      <a class="btn btn-outline" href="AUSTIN FERRO_CV2026.pdf" download>
         <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v8M5 7l3 3 3-3"/><rect x="2" y="11" width="12" height="2" rx="1"/></svg>
         Download CV
       </a>
@@ -785,17 +798,20 @@
       <a class="btn btn-outline" href="https://www.linkedin.com/in/austin-ferro-phd-b4638987/" target="_blank" rel="noopener">
         LinkedIn
       </a>
-      <a class="btn btn-outline" href="#contact">
-        Contact
-      </a>
     </div>
   </div>
+  <div class="hero-media">
   <div class="gif-frame">
     <img
       src="scene4_opc_microglia_contacts_synapses.gif"
       alt="Live two-photon microscopy: OPC–microglia contacts and synapses"
     />
     <p class="gif-caption">OPC–microglia contacts &amp; synapses · live two-photon imaging</p>
+  </div>
+
+  <div class="gif-frame headshot-frame">
+    <img src="Ferro_Headshot.jpg" alt="Portrait of Austin Ferro standing in the lab in front of the custom two-photon microscope." />
+  </div>
   </div>
 </section>
 
@@ -855,6 +871,12 @@
       <p class="media-caption">OPC <span class="swatch" style="background:#c84bcc;"></span> microglia <span class="swatch" style="background:#4bcc6e;"></span> contacts <span class="swatch" style="background:#4bccc8;"></span> neuron–OPC synapses <span class="swatch" style="background:#ccb94b;"></span></p>
     </div>
     <div class="media-card">
+      <div class="video-wrap" style="--ar: 1107 / 1125; background:#fff;">
+        <img src="Neuron_OPC_Synapse_Example.png" alt="A reconstructed pyramidal neuron in grey with an OPC in green overlapping its arbor, synapses marked as coloured spheres, alongside a magnified inset showing OPC processes wrapping a dendrite studded with synapses.">
+      </div>
+      <p class="media-caption">Image of an OPC (green), neighboring neuron (grey) and synapse colored by presynaptic partner cell type innervation from the MICrONS dataset of mouse visual cortex.</p>
+    </div>
+    <div class="media-card">
       <div class="video-wrap video-wrap--wide">
         <iframe
           src="https://www.youtube.com/embed/csgJjh0XDls"
@@ -865,12 +887,6 @@
         </iframe>
       </div>
       <p class="media-caption">Example in vivo videos of microglia–OPC interactions</p>
-    </div>
-    <div class="media-card">
-      <div class="video-wrap" style="--ar: 1107 / 1125; background:#fff;">
-        <img src="Neuron_OPC_Synapse_Example.png" alt="A reconstructed pyramidal neuron in grey with an OPC in green overlapping its arbor, synapses marked as coloured spheres, alongside a magnified inset showing OPC processes wrapping a dendrite studded with synapses.">
-      </div>
-      <p class="media-caption">Image of an OPC (green), neighboring neuron (grey) and synapse colored by presynaptic partner cell type innervation from the MICrONS dataset of mouse visual cortex.</p>
     </div>
     <div class="media-card">
       <div class="video-wrap" style="--ar: 1984 / 1344;">
